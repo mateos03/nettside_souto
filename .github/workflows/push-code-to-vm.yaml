@@ -28,8 +28,6 @@ jobs:
                 name: production-files
                 path: ./dist
 
-            - run: echo ${{ secrets.SSH_USERNAME }}
-
             - uses: appleboy/scp-action@v0.1.7
               with:
                 host: ${{ secrets.SSH_HOST }}
