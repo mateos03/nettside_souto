@@ -10,6 +10,5 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - run: git checkout master
             - run: run build
             - run: scp -r dist/* mateo@51.120.3.115:/var/www/souto.no/
