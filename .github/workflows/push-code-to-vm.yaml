@@ -28,6 +28,11 @@ jobs:
                 name: production-files
                 path: ./dist
 
-            - run: apt-get update && apt-get install -y openssh-client
-            
-            - run: scp -r dist/* mateo@51.120.3.115:/var/www/souto.no/
+            - uses: appleboy/scp-action@v0.1.7
+              with:
+                host: ${{ secrets.SSH_HOST }}
+                username: ${{ secrets.SSH_USERNAME }}
+                password: ${{ secrets.SSH_PASSWORD }}
+                port: ${{ secrets.SSH_PORT }}
+                source: "./site/dist"
+                target: /var/www/souto.no/
