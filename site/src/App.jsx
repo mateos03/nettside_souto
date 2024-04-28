@@ -5,7 +5,7 @@ import './css/App.css'
 export default function App() {
   return (
     <div>
-      Is this home???
+      Ingenting som funka lenger
     </div>
   )
 }
