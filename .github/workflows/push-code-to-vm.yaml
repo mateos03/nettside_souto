@@ -10,5 +10,5 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - run: run build
+            - run: npm run build
             - run: scp -r dist/* mateo@51.120.3.115:/var/www/souto.no/
