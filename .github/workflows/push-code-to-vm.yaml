@@ -34,5 +34,5 @@ jobs:
                 username: ${{ secrets.USERNAME }}
                 password: ${{ secrets.PASSWORD }}
                 port: ${{ secrets.PORT }}
-                source: "/site/dist/*"
+                source: "./site/dist/index.html"
                 target: /var/www/souto.no/
